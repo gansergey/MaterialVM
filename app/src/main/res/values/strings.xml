@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Material</string>
+    <string name="app_name">WIKI</string>
+    <string name="photo_of_the_day_stub">Фото дня</string>
+    <string name="error_message_load_img">Невозможно загрузить изображение</string>
+    <string name="search_wiki">Поиск на википедии</string>
+    <string name="wiki_helper_text">Использовано символов:</string>
 </resources>

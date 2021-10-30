@@ -7,4 +7,42 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="purple_light">#ffaa80eb</color>
+    <color name="purple_dark">#5944d4</color>
+
+    <color name="blue_light">#dfe9fd</color>
+
+    <color name="blue_gray_dark">#6b7992</color>
+    <color name="blue_gray_light">#a0aec4</color>
+
+    <color name="yellow">#EDC03A</color>
+
+    <!-- Dark color. -->
+    <color name="dark_background_main">#202429</color>
+    <color name="dark_title_big_text">#a7a8aa</color>
+    <color name="dark_title_small_text">#7c7d80</color>
+    <color name="dark_orange">#e84214</color>
+    <color name="dark_background_card_view">#202429</color>
+    <color name="dark_background_linear">#202429</color>
+    <color name="dark_border">#7c7d80</color>
+    <color name="dark_card_view_round_border_color">#202429</color>
+    <color name="dark_chip_back_on">#e84214</color>
+    <color name="dark_chip_back_off">#EDEDED</color>
+    <color name="dark_chip_text_color_on">#e84214</color>
+    <color name="dark_chip_text_color_off">#a7a8aa</color>
+
+    <!-- Light color. -->
+    <color name="light_background_main">#e8f0e4</color>
+    <color name="light_title_big_text">#3d3e40</color>
+    <color name="light_title_small_text">#505657</color>
+    <color name="light_green">#5daa96</color>
+    <color name="light_background_card_view">#FFFFFF</color>
+    <color name="light_background_linear">#e8f0e4</color>
+    <color name="light_border">#5daa96</color>
+    <color name="light_card_view_round_border_color">#FFFFFF</color>
+    <color name="light_chip_back_on">#5daa96</color>
+    <color name="light_chip_back_off">#eaeee2</color>
+    <color name="light_chip_text_color_on">#FFFFFF</color>
+    <color name="light_chip_text_color_off">#5daa96</color>
 </resources>

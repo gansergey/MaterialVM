@@ -47,6 +47,17 @@ class PictureOfTheDayFragment : Fragment() {
                     Uri.parse("https://en.wikipedia.org/wiki/${binding.inputEditText.text.toString()}")
             })
         }
+//        binding.switchTheme.setOnClickListener {
+//            changeTheme()
+//        }
+    }
+
+    private fun changeTheme() {
+//        if (binding.switchTheme.isChecked) {
+//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//        } else {
+//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//        }
     }
 
     private fun setBottomSheetBehavior(bottomSheet: ConstraintLayout) {
@@ -66,7 +77,6 @@ class PictureOfTheDayFragment : Fragment() {
                 serverResponseData.url?.let {
                     showSuccess(serverResponseData)
                     showLoading(false)
-
                 } ?: showError(getString(R.string.error_message_load_img))
             }
             is PictureOfTheDayData.Loading -> {
@@ -88,13 +98,15 @@ class PictureOfTheDayFragment : Fragment() {
                 this.visibility = View.GONE
             }
         }
+
+
     }
 
     private fun showSuccess(data: PODServerResponseData) {
         binding.imageView.load(data.url) {
             lifecycle(this@PictureOfTheDayFragment)
-            error(R.drawable.ic_baseline_no_image)
-            placeholder(R.drawable.ic_baseline_motion_photos_on_24)
+            // error(R.drawable.ic_baseline_no_image)
+            // placeholder(R.drawable.ic_baseline_motion_photos_on_24)
         }
         view?.findViewById<TextView>(R.id.bottom_sheet_description_header)?.text = data.title
         view?.findViewById<TextView>(R.id.bottom_sheet_description)?.text = data.explanation
@@ -104,4 +116,5 @@ class PictureOfTheDayFragment : Fragment() {
     private fun showError(error: String) {
         //TO DO
     }
+
 }

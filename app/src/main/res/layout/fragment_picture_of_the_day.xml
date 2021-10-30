@@ -4,97 +4,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:id="@+id/linearLayoutCompat"
+            style="@style/linearVertical">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="32dp">
+                style="@style/cardViewMain"
+                android:layout_marginTop="@dimen/card_margin_top">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_layout"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    style="@style/textInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/background_app"
                     android:hint="@string/search_wiki"
-                    android:padding="32dp"
-                    app:boxBackgroundColor="@color/white"
-                    app:boxCornerRadiusBottomEnd="20dp"
-                    app:boxCornerRadiusBottomStart="20dp"
-                    app:boxCornerRadiusTopEnd="20dp"
-                    app:boxCornerRadiusTopStart="20dp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="20"
-                    app:counterTextColor="@color/white"
                     app:endIconCheckable="true"
                     app:endIconDrawable="@drawable/ic_wikipedia"
                     app:endIconMode="custom"
                     app:helperText="@string/wiki_helper_text"
-                    app:helperTextTextColor="@color/white">
+                    app:strokeColor="@color/dark_title_small_text">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/input_edit_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        style="@style/text_input_edit_text" />
+
 
                 </com.google.android.material.textfield.TextInputLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="42dp">
+            <com.google.android.material.card.MaterialCardView style="@style/cardViewMain">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/linearVerticalInCardView">
 
-                    <com.example.material.model.EquilateralImageView
-                        android:id="@+id/image_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:contentDescription="@string/photo_of_the_day_stub"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/ic_baseline_no_image" />
+                    <TextView
+                        style="@style/textViewBig"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/photo_nasa" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card"
+                        style="@style/cardViewRound">
+
+                        <com.example.material.model.EquilateralImageView
+                            android:id="@+id/image_view"
+                            style="@style/image_view_for_round_card_view"
+                            app:srcCompat="@drawable/ic_baseline_no_image" />
+
+                    </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/chipGroup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:padding="8dp"
+                        style="@style/chipGroup"
                         app:singleSelection="true">
 
                         <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Choice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Фото дня" />
+                            style="@style/chipChoice"
+                            android:checked="true"
+                            android:text="@string/photo_day" />
 
                         <com.google.android.material.chip.Chip
-                            style="@style/Widget.MaterialComponents.Chip.Choice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Фото недели" />
+                            style="@style/chipChoice"
+                            android:text="@string/photo_week" />
 
                     </com.google.android.material.chip.ChipGroup>
+
 
                 </LinearLayout>
 
@@ -102,50 +76,35 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </ScrollView>
+    <include layout="@layout/bottom_sheet_layout" />
 
     <FrameLayout
         android:id="@+id/loadingLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/background_app"
+        style="@style/frameLayout"
         android:visibility="invisible">
 
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:indeterminate="true"
-            app:indicatorColor="#7262CC"
-            app:trackColor="#E7E3FF" />
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical">
 
-            <com.example.material.model.EquilateralImageView
-                android:layout_width="256dp"
-                android:layout_height="256dp"
-                android:foregroundGravity="center"
-                app:srcCompat="@drawable/ic_wiki_png_logo" />
+            <ImageView
+
+                style="@style/imageLogo" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:shadowColor="@color/black"
-                android:shadowDx="-2"
-                android:shadowDy="2"
-                android:shadowRadius="2"
-                android:text="Wikipedia App"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                style="@style/textViewBig"
+                android:text="@string/space_nasa_app" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/textViewSmallPlus"
+                android:text="@string/nasa_com" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator style="@style/circularProgressIndicator" />
+
         </LinearLayout>
 
     </FrameLayout>
-
-    <include layout="@layout/bottom_sheet_layout" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

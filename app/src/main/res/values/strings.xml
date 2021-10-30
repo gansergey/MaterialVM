@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Material</string>
+    <string name="app_name">Nasa app</string>
+    <string name="photo_of_the_day_stub">Фото дня</string>
+    <string name="error_message_load_img">Невозможно загрузить изображение</string>
+    <string name="search_wiki">Поиск на википедии</string>
+    <string name="wiki_helper_text">Использовано символов:</string>
+    <string name="photo_nasa">Фото со спутника NASA</string>
+    <string name="photo_day">Фото дня</string>
+    <string name="photo_week">Фото недели</string>
+    <string name="space_nasa_app">SPACE NASA APP</string>
+    <string name="nasa_com">nasa.com</string>
 </resources>

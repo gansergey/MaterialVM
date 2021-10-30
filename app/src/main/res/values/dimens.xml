@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">12dp</dimen>
+    <dimen name="card_margin_top">24dp</dimen>
+    <dimen name="card_radius">32dp</dimen>
+    <dimen name="card_border_width">0dp</dimen>
+    <dimen name="card_shadow_size">8dp</dimen>
+    <dimen name="text_input_layout_padding">32dp</dimen>
+    <dimen name="text_input_layout_radius">20dp</dimen>
+    <dimen name="border_size">2dp</dimen>
+
+    <dimen name="card_view_round_padding">18dp</dimen>
+    <dimen name="card_view_round_radius">1000dp</dimen>
+    <dimen name="card_view_round_shadow_size">4dp</dimen>
+    <dimen name="card_view_round_border_size">8dp</dimen>
+
+    <dimen name="text_view_big">22sp</dimen>
+    <dimen name="text_view_padding">6dp</dimen>
+    <dimen name="text_view_small_plus">16sp</dimen>
+    <dimen name="chip_group_padding">8dp</dimen>
+    <dimen name="text_view_small_margin_top">8dp</dimen>
+    <dimen name="progress_margin_top">16dp</dimen>
+    <dimen name="view_width">25dp</dimen>
+    <dimen name="view_height">3dp</dimen>
+    <dimen name="view_margin_top">12dp</dimen>
+    <dimen name="text_view_small_margin">26dp</dimen>
+    <dimen name="text_view_small">16sp</dimen>
+    <dimen name="image_view_logo_loading">360dp</dimen>
+
+</resources>

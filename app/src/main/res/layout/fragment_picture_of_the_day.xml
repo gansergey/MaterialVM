@@ -4,84 +4,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat"
-            style="@style/linearVertical">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        style="@style/linearVertical">
 
-            <com.google.android.material.card.MaterialCardView
-                style="@style/cardViewMain"
-                android:layout_marginTop="@dimen/card_margin_top">
+        <com.google.android.material.card.MaterialCardView
+            style="@style/cardViewMain"
+            android:layout_marginTop="@dimen/card_margin_top">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_layout"
-                    style="@style/textInputLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/search_wiki"
-                    app:endIconCheckable="true"
-                    app:endIconDrawable="@drawable/ic_wikipedia"
-                    app:endIconMode="custom"
-                    app:helperText="@string/wiki_helper_text"
-                    app:strokeColor="@color/dark_title_small_text">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout"
+                style="@style/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_wiki"
+                app:endIconCheckable="true"
+                app:endIconDrawable="@drawable/ic_wikipedia"
+                app:endIconMode="custom"
+                app:helperText="@string/wiki_helper_text"
+                app:strokeColor="@color/dark_title_small_text">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/input_edit_text"
-                        style="@style/text_input_edit_text" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView style="@style/cardViewMain">
-
-                <LinearLayout style="@style/linearVerticalInCardView">
-
-                    <TextView
-                        style="@style/textViewBig"
-                        android:layout_marginTop="24dp"
-                        android:text="@string/photo_nasa" />
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/card"
-                        style="@style/cardViewRound">
-
-                        <com.example.material.model.EquilateralImageView
-                            android:id="@+id/image_view"
-                            style="@style/image_view_for_round_card_view"
-                            app:srcCompat="@drawable/ic_baseline_no_image" />
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chipGroup"
-                        style="@style/chipGroup"
-                        app:singleSelection="true">
-
-                        <com.google.android.material.chip.Chip
-                            style="@style/chipChoice"
-                            android:checked="true"
-                            android:text="@string/photo_day" />
-
-                        <com.google.android.material.chip.Chip
-                            style="@style/chipChoice"
-                            android:text="@string/photo_week" />
-
-                    </com.google.android.material.chip.ChipGroup>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_edit_text"
+                    style="@style/text_input_edit_text" />
 
 
-                </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        <com.google.android.material.card.MaterialCardView style="@style/cardViewMain">
+
+            <LinearLayout style="@style/linearVerticalInCardView">
+
+                <TextView
+                    style="@style/textViewBig"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/photo_nasa" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card"
+                    style="@style/cardViewRound">
+
+                    <com.example.material.model.EquilateralImageView
+                        android:id="@+id/image_view"
+                        style="@style/image_view_for_round_card_view"
+                        app:srcCompat="@drawable/ic_baseline_no_image" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    style="@style/chipGroup"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/chipChoice"
+                        android:checked="true"
+                        android:text="@string/photo_day" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/chipChoice"
+                        android:text="@string/photo_week" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <include layout="@layout/bottom_sheet_layout" />
+
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:navigationIcon="@drawable/ic_menu_24" />
 
     <FrameLayout
         android:id="@+id/loadingLayout"
         style="@style/frameLayout"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,9 +100,7 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-
-                style="@style/imageLogo" />
+            <ImageView style="@style/imageLogo" />
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/textViewBig"

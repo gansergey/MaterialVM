@@ -111,6 +111,14 @@
         <item name="android:scaleType">centerCrop</item>
     </style>
 
+    <style name="image_view_for_view_pager">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/image_view_for_view_pager_margin</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
     <style name="chipGroup">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -182,5 +190,20 @@
         <item name="android:layout_gravity">center</item>
         <item name="srcCompat">@drawable/ic_nasa_png_logo_light</item>
     </style>
+
+    <style name="Theme.Material.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FrameBackground">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/background_app</item>
+    </style>
+
+    <style name="Theme.Material.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Material.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

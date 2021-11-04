@@ -12,7 +12,7 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/dark_background_main</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -107,6 +107,14 @@
         <item name="android:scaleType">centerCrop</item>
     </style>
 
+    <style name="image_view_for_view_pager">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/image_view_for_view_pager_margin</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
     <style name="chipGroup">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -177,6 +185,12 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:contentDescription">@string/space_nasa_app</item>
         <item name="srcCompat">@drawable/ic_nasa_png_logo_dark</item>
+    </style>
+
+    <style name="FrameBackground">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/dark_background_linear</item>
     </style>
 
 

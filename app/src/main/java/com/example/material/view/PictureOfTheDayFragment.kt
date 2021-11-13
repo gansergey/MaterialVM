@@ -41,6 +41,7 @@ class PictureOfTheDayFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setBottomSheetBehavior(view.findViewById(R.id.bottom_sheet_container))
         setBottomAppBar(view)
+//        binding.linearLayoutCompat.transitionToStart()
         binding.inputLayout.setEndIconOnClickListener {
             startActivity(Intent(Intent.ACTION_VIEW).apply {
                 data =
@@ -50,6 +51,7 @@ class PictureOfTheDayFragment : Fragment() {
 //        binding.switchTheme.setOnClickListener {
 //            changeTheme()
 //        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

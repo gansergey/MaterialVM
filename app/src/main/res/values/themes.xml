@@ -133,7 +133,7 @@
         <item name="chipBackgroundColor">@drawable/bg_chip_state_background</item>
     </style>
 
-    <style name="frameLayout">
+    <style name="layoutBackground">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@drawable/background_app</item>
@@ -184,9 +184,10 @@
     </style>
 
     <style name="imageLogo">
-        <item name="android:layout_width">@dimen/image_view_logo_loading</item>
-        <item name="android:layout_height">@dimen/image_view_logo_loading</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:contentDescription">@string/space_nasa_app</item>
+        <item name="layout_constraintWidth_percent">0.7</item>
         <item name="android:layout_gravity">center</item>
         <item name="srcCompat">@drawable/ic_nasa_png_logo_light</item>
     </style>

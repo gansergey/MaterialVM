@@ -17,6 +17,10 @@
             android:label="@string/title_activity_view_pager"
             android:theme="@style/Theme.Material.NoActionBar" />
         <activity
+            android:name=".view.AnimationBonusActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material.NoActionBar" />
+        <activity
             android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>

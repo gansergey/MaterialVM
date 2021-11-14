@@ -65,7 +65,10 @@ class PictureOfTheDayFragment : Fragment() {
                 Toast.makeText(context, "Favourite", Toast.LENGTH_SHORT).show()
                 activity?.let { startActivity(Intent(it, PagerActivity::class.java)) }
             }
-            R.id.app_bar_search -> Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show()
+            R.id.app_bar_search -> {
+                //Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show()
+                activity?.let { startActivity(Intent(it, AnimationBonusActivity::class.java)) }
+            }
             android.R.id.home -> {
                 activity?.let {
                     BottomNavigationDrawerFragment().show(it.supportFragmentManager, "tag")

@@ -203,6 +203,7 @@
         <item name="android:background">@drawable/background_app</item>
     </style>
 
+
     <style name="Theme.Material.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Material.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

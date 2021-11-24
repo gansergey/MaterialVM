@@ -1,6 +1,13 @@
 package com.example.material.view
 
+import android.graphics.Typeface
+import android.graphics.Typeface.BOLD
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
+import android.text.style.UnderlineSpan
 import android.transition.ChangeBounds
 import android.transition.TransitionManager
 import android.view.animation.AnticipateOvershootInterpolator
@@ -16,13 +23,19 @@ class AnimationBonusActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityAnimationsBonusStartBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.backgroundImage.setOnClickListener {
             if (show) hideComponents() else
                 showComponents()
         }
+
+        binding.description.typeface =
+            Typeface.createFromAsset(assets, "GaliverSansObliquesItalic.ttf")
+        binding.title.typeface =
+            Typeface.createFromAsset(assets, "MarsMissionItalic.ttf")
+        setSpannableTitle()
+        setSpannableDescription()
     }
 
     private fun showComponents() {
@@ -51,5 +64,46 @@ class AnimationBonusActivity : AppCompatActivity() {
             transition
         )
         constraintSet.applyTo(binding.constraintContainer)
+    }
+
+    private fun setSpannableTitle() {
+        val spannable = SpannableString(getString(R.string.title_text_View_bonus))
+        spannable.setSpan(
+            ForegroundColorSpan(getColor(R.color.dark_orange)),
+            0, 4,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        spannable.setSpan(
+            ForegroundColorSpan(getColor(R.color.dark_orange)),
+            0, 4,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        spannable.setSpan(
+            StyleSpan(BOLD),
+            0, 4,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        spannable.setSpan(
+            UnderlineSpan(),
+            5, 12,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        binding.title.text = spannable
+    }
+
+    private fun setSpannableDescription() {
+
+        val spannable = SpannableString(getString(R.string.text_bonus_activity))
+
+        spannable.setSpan(
+            ForegroundColorSpan(getColor(R.color.dark_orange)),
+            33, 49,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        binding.description.text = spannable
     }
 }

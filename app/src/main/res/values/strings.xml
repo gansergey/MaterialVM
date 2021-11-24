@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">Material</string>
+    <string name="app_name">Nasa app</string>
+    <string name="photo_of_the_day_stub">Фото дня</string>
+    <string name="error_message_load_img">Невозможно загрузить изображение</string>
+    <string name="search_wiki">Поиск на википедии</string>
+    <string name="wiki_helper_text">Использовано символов:</string>
+    <string name="photo_nasa">Фото со спутника NASA</string>
+    <string name="photo_day">Фото дня</string>
+    <string name="photo_week">Фото недели</string>
+    <string name="space_nasa_app">SPACE NASA APP</string>
+    <string name="nasa_com">nasa.com</string>
+    <string name="settings">Настройки</string>
+    <string name="planets">Планеты</string>
+    <string name="search">Поиск</string>
+    <string name="more">Дополнительно</string>
+    <string name="content_description_more">Описание</string>
+    <string name="favourite">Избранное</string>
+    <string name="title_activity_view_pager">VIewPagerActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_text_View_bonus">Alex Andrews</string>
+    <string name="text_bonus_activity">Это потрясающая фотография нашего Млечного Пути. Сделанное фотографом Alex Andrews</string>
+    <string name="text_bonus_date">13 ноября 2021 г.</string>
+    <string name="notes">Заметки</string>
 </resources>
